@@ -1,0 +1,118 @@
+# karthicks
+
+def details():
+    print('_______ Welcome To NSK Hotel _______')
+    ch =(' 1.Booking \n 2.RoomsInformation \n 3.Payment \n 4.Exit ')
+    print(ch)
+    ch = int(input('->'))
+
+    if ch == 1:
+        Booking()
+    elif ch == 2:
+        RoomsInformation()
+    elif ch == 3:
+        Payment()
+    elif ch == 4:
+        Exit()
+    else:
+        print('wrong choice')
+def Booking():
+    print('***********Booking Rooms************')
+    while 1:
+        n=str(input('Enter The Name:'))
+        pn=str(input('Enter The Phone number:'))
+        a=str(input('Enter The Address:'))
+        print('**********Select Room Type***********')
+        print('1.AC ROOM')
+        print('2.NON AC ROOM')
+        print('3.3-BED AC ROOM')
+        print('4.3-BED NON AC ROOM')
+        print('\t press 0 for ROOM PRICE')
+        ch=int(input('->'))
+        if ch==0:
+            print('1.AC ROOM -Rs 5000')
+            print('2.NON AC ROOM - Rs 4000')
+            print('3.3-BED AC ROOM - Rs 7000')
+            print('4.3-BED NON AC ROOM - Rs 6000')
+        if ch==1:
+            print('AC ROOM')
+            print('5000')
+        elif ch==2:
+            print('NON AC ROOM')
+            print('4000')
+        elif ch==3:
+            print('3-BED AC ROOM')
+            print('7000')
+        elif ch==4:
+            print('3-BED NON AC ROOM')
+            print('6000')
+        else:
+            Exit()
+        details()
+def RoomsInformation():
+    print('******ROOM INFORMATIONS***********')
+    print('1.AC ROOM')
+    print('2. NON AC ROOM')
+    print('3.3-BED AC ROOM')
+    print('4.3-BED NON AC ROOM')
+    ch=int(input('->'))
+    if ch==1:
+        print('television')
+        print('telephone')
+        print('Tea and Coffee')
+    elif ch==2:
+        print('One Bed')
+        print('Television')
+    elif ch==3:
+        print('3-Bed ')
+        print('Television')
+        print('Telephone')
+        print('Tea')
+    elif ch==4:
+        print('3-Bed')
+        print('Television')
+    else:
+        Exit()
+    details()
+def Payment():
+    print('********PAYMENT DETAILS**********')
+    print('1.Cash')
+    print('2.Credit/Debit Card')
+    print('3.Paytm/Phonepay')
+    ch=int(input('->'))
+    if ch==1:
+        print('the payment is cash mode')
+        print('Payment Successfully')
+        print('Visit Again')
+
+    elif ch==2:
+        print('the payment is credit of debit card mode')
+        print('Payment Successfully')
+        print('Visit Again')
+    elif ch==3:
+        print('the payment is paytm or phonepay mode')
+        print('Payment Successfully')
+        print('Visit Again')
+    else:
+        Exit()
+    details()
+def Exit():
+
+    print('*********Exit*********')
+    print('thank you and come again')
+
+details()
+
+"""
+Booking()
+RoomsInformation()
+Payment()
+Exit()
+"""
+
+
+"""
+RoomsInformation()
+Payment()
+Exit()
+"""
