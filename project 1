@@ -1,0 +1,109 @@
+class Employee:
+    def Emp(self):
+        print('1.Employee_Details')
+        print('2.Payment')
+        print('3.Department')
+        print('4.Location')
+        ch = int(input('->'))
+        print(ch)
+        if ch == 1:
+            obj4.Emp1()
+        elif ch == 2:
+            obj4.Pay()
+        elif ch == 3:
+            obj4.Depa()
+        elif ch == 4:
+            obj4.Loc()
+        else:
+            print('Worng choice')
+        print('\n Next progress')
+        obj4.Emp()
+
+class Employee_Details(Employee):
+    def Emp1(self):
+        print('***********Employee Details***********')
+        Id=input('Enter The Id:')
+        Name=input('Enter The Name:')
+        Sector=input('Enter The Sector:')
+        City=input('Enter The City:')
+        print('Employee Details : ','Id =',Id,",",'Name =',Name,",",'City =',City,",",'Sector =',Sector)
+        obj4.Emp()
+class Payment(Employee_Details):
+    def Pay(self):
+        print("**********Payment Details***********")
+        Salary=int(input('Enter The Salary:'))
+        PF=int(input('Enter The PF Amount:'))
+        Salary=Salary-PF
+        print(Salary)
+        Cen_tax=int(input('Enter The Central Tax:'))
+        Salary=Salary-Cen_tax
+        print(Salary)
+        Sta_tax=int(input('Enter The State Tax:'))
+        Salary=Salary-Sta_tax
+        print(Salary)
+        Insurance=int(input('Enter The Insurance Amount:'))
+        Salary=Salary-Insurance
+        print(Salary)
+        Bus_Facility=int(input('Enter The Bus_Facility:'))
+        Salary=Salary-Bus_Facility
+        print(Salary)
+        print('Total Salary :',Salary)
+        obj4.Emp()
+class Department(Payment):
+    def Depa(self):
+        print('***********Department Details***********')
+        print('1.IT')
+        print('2.MD')
+        print('3.BD')
+        print('4.FB')
+        ch = int(input('->'))
+        if ch == 1:
+            print(input('Enter The Dep_ID:'))
+            print('This is IT sector')
+        elif ch == 2:
+            print(input('Enter The Dep_ID:'))
+            print('This is mechanical Department sector')
+        elif ch ==3:
+            print(input('Enter The Dep_ID:'))
+            print('This is Banking Department sector')
+        elif ch ==4:
+            print(input('Enter The Dep_ID:'))
+            print('This is Finance Banking Department sector')
+        obj4.Emp()
+class Location(Department):
+    def __init__(self):
+        print('************Employee Payment System*************')
+    def Loc(self):
+        print('****************Location Details****************')
+        print('1.Tamilnadu')
+        print('2.Karnataka')
+        print('3.Andhara')
+        ch=int(input('->'))
+        if ch == 1:
+            print(' MDS bakes opposite',',','\n',
+                  'Kochi Hwy,Eachanari',',','\n',
+                  'Coimbatore-641021')
+        elif ch == 2:
+            print(' No 2'',','Ground Floor',',','\n',
+                  '29th Main Road',',','\n',
+                  'Kuvempu Nagar',',','\n',
+                  'BTM Layout',',','\n',
+                  'Bangalore-560076')
+        elif ch == 3:
+            print('2D',',''VIP Road',',','\n',
+                  ' Asilmetta',',','\n',
+                  'Visakhapatnam',',','\n',
+                  'Andhra Pradesh-530003')
+obj4=Location()
+obj4.Emp()
+
+
+
+
+
+
+
+
+
+
+
